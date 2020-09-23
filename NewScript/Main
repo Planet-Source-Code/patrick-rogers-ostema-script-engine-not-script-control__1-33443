@@ -1,0 +1,74 @@
+VERSION 5.00
+Begin VB.Form ScriptForm 
+   BorderStyle     =   1  'Fixed Single
+   Caption         =   "Shark Script(In developement)"
+   ClientHeight    =   5700
+   ClientLeft      =   45
+   ClientTop       =   330
+   ClientWidth     =   7815
+   LinkTopic       =   "Form1"
+   MaxButton       =   0   'False
+   MinButton       =   0   'False
+   ScaleHeight     =   5700
+   ScaleWidth      =   7815
+   StartUpPosition =   3  'Windows Default
+   Begin VB.CheckBox Check1 
+      Caption         =   "Display tokens while compiling"
+      Height          =   615
+      Left            =   6600
+      TabIndex        =   4
+      Top             =   1320
+      Width           =   1215
+   End
+   Begin VB.CommandButton Command2 
+      Caption         =   "Execute"
+      Height          =   495
+      Left            =   6600
+      TabIndex        =   3
+      Top             =   720
+      Width           =   1215
+   End
+   Begin VB.CommandButton Command1 
+      Caption         =   "Compile"
+      Height          =   495
+      Left            =   6600
+      TabIndex        =   2
+      Top             =   120
+      Width           =   1215
+   End
+   Begin VB.TextBox OutBox 
+      Height          =   2055
+      Left            =   120
+      MultiLine       =   -1  'True
+      ScrollBars      =   2  'Vertical
+      TabIndex        =   1
+      Top             =   3480
+      Width           =   6375
+   End
+   Begin VB.TextBox CodeBox 
+      Height          =   3255
+      Left            =   120
+      MultiLine       =   -1  'True
+      ScrollBars      =   2  'Vertical
+      TabIndex        =   0
+      Text            =   "Main.frx":0000
+      Top             =   120
+      Width           =   6375
+   End
+End
+Attribute VB_Name = "ScriptForm"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+
+Private Sub Command1_Click()
+Dim Code As String
+Code = CodeBox.Text
+ScriptMod.CleanCode Code
+End Sub
+
+
+Private Sub Command2_Click()
+ScriptMod.Execute
+End Sub

@@ -1,0 +1,51 @@
+ÿint test0
+int test1
+int temp
+str name0
+print "Enter your name"
+input name0
+print "Enter an integer"
+input test0
+print "Enter another integer"
+input test1
+print "Your name is:"
+print name0
+print "You entered"
+print test0
+print test1
+if test0 = test1 then
+     print "You entered the same number twice!"
+endif
+if test0 < 0 then
+     print "1st Number is negative"
+     if test1 < 0 then
+          print "So is the second"
+     endif
+     if test1 > 0 then
+          print "the second is positive"
+     endif
+endif
+if test0 > 0 then
+      print "1st Number is positive"
+      if test1 > 0 then
+          print "So is the second"
+     endif
+     if test1 < 0 then
+          print "the second is negative"
+     endif
+endif
+print "The first number divided by the second number is:"
+temp = test0 / test1
+print temp
+print "The first number multiplied by the second number is:"
+temp = test0 * test1
+print temp
+print "The first number added to the second number is:"
+temp = test0 + test1
+print temp
+print "The first number subtracted by the second number is:"
+temp = test0 - test1
+print temp
+print "By the way 178 + 5 / 3 - 4 / 2 * 5 * 8 / 4 + test0 - test1 + 2 equals:"
+temp = 178 + 5 / 3 - 4 / 2 * 5 * 8 / 4 + test0 - test1 + 2
+print temp
